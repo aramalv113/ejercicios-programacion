@@ -1,0 +1,1 @@
+Los archivos están hechos desde PSeint, por lo que para verlos es posible que tengas que hacerlo desde el programa.
