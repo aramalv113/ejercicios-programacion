@@ -56,7 +56,12 @@ def cuentaDias (day:int, month:int, year:int) -> int:
 def calcula_anio_completo(d1: int, d2: int, m1: int, m2: int, a1: int, a2: int) -> int:
     # 1 1 2020
     # 1 1 2021
-    pass
+
+    # si los años son distintos, podremos hacer el cálculo, de lo contrario, estaríamos en el mismo año y no habría pasado ningún año completo
+    if a1!=a2:
+        return 1
+    
+    return 0
 
 
 
