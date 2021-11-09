@@ -1,4 +1,4 @@
-from ej7 import cuentaDias
+from ej7 import convierte_en_dias
 import pytest
 
 data = [
@@ -8,4 +8,4 @@ data = [
 
 @pytest.mark.parametrize("day,month,year,days",data)
 def test_eval (day,month,year,days):
-    assert cuentaDias(day,month,year) == days
+    assert convierte_en_dias(day,month,year) == days
