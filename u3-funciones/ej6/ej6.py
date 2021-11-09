@@ -3,7 +3,7 @@ import os
 os.system("cls")
 
 
-
+# Esta función está testeada en el ej5
 def esBisiesto (year: int=0) -> bool:
     """Comprueba si un año es bisiesto o no
 
