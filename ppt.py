@@ -12,4 +12,3 @@ if j1.index(jugada1)==j2.index(jugada2):
     print("victoria")
 else:
     print("derrota")
-

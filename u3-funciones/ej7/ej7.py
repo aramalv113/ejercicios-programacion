@@ -1,5 +1,6 @@
 import os
 
+
 os.system("cls")
 
 
@@ -151,18 +152,16 @@ def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int) 
 
 
 if __name__=="__main__":
-    #fecha1 = input("Fecha 1:")
-    #d1 = int(input("   Dia: "))
-    #m1 = int(input("   Mes: "))
-    #a1 = int(input("   Año: "))
+    print("Fecha 1:")
+    d1 = int(input("   Dia: "))
+    m1 = int(input("   Mes: "))
+    a1 = int(input("   Año: "))
 
-    #fecha2 = input("Fecha 2:")
-    #d2 = int(input("   Dia: "))
-    #m2 = int(input("   Mes: "))
-    #a2 = int(input("   Año: "))
+    print("\n")
 
-    #calcula_anio_completo(d1,d2,m1,m2,a1,a2)
+    print("Fecha 2:")
+    d2 = int(input("   Dia: "))
+    m2 = int(input("   Mes: "))
+    a2 = int(input("   Año: "))
 
-    #print(fecha1-fecha2)
-
-    pass
+    print(calcula_anio_completo(d1,m1,a1,d2,m2,a2))
