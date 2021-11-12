@@ -16,6 +16,8 @@ def esBisiesto (year: int=0) -> bool:
         bool: 
             True si el año es bisiesto
             False si el año no es bisiesto
+        None:
+            si el parámetro es ilegal
     """
     try:
         if year>=0:
@@ -100,7 +102,7 @@ def convierte_en_dias (day:int, month:int, year:int) -> int:
 
 
 
-def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int) -> int:
+def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int):
     """Calcula los años completos que hay entre dos fechas
 
     Args:
@@ -117,8 +119,6 @@ def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int) 
             -1 si alguna de las fechas, o ambas, es incorrecta
             None si se introducen parámetros ilegales
     """
-    
-    
     years = -1
     # Calculamos los días que hay desde d1/m1/a1 hasta el 31 de diciembre de ese año (a1)
     diasFecha1 = convierte_en_dias(d1,m1,a1)
@@ -126,8 +126,9 @@ def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int) 
     diasFecha2 = convierte_en_dias(d2,m2,a2)
 
     # Si ambos nos devuelven algo distinto a -1, las fechas están correctas y podemos continuar
-    # de lo contrario, consulta lo que devuelve la función en la documentación
-    if diasFecha1!=-1 and diasFecha2!=-1:
+    if (diasFecha1 is None) or (diasFecha2 is None):
+        years = None
+    elif diasFecha1!=-1 and diasFecha2!=-1:
         # -- le restamos 366 días a los días que han pasado desde el 1 de enero hasta d1 si es bisiesto
         # -- le restamos 365 días a los días que han pasado desde el 1 de enero hasta d1 si no es bisiesto
         if esBisiesto(a1):
@@ -144,8 +145,7 @@ def calcula_anio_completo(d1: int, m1: int, a1: int, d2: int, m2: int, a2: int) 
             fin = a1
 
         years = (fin - inicio) + ((diasFecha1 + diasFecha2)//365)
-    elif diasFecha1 is None or diasFecha2 is None:
-        years = None
+    
 
     return years
 
