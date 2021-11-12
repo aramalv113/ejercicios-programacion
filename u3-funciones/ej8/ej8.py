@@ -35,9 +35,3 @@ if __name__=="__main__":
     decimal = 3
 
     print(num_digitos_binarios(decimal))
-
-
-    d = None
-
-    if d is None:
-        print("hola")
